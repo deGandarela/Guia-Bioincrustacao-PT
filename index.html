@@ -3,36 +3,843 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guia de Identificação - Espécies Invasoras Marinhas PT</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <title>Cartaz ID Bioincrustação — PT | Espécies Invasoras</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        @page {
+            size: A3 landscape;
+            margin: 8mm;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: white;
+            color: #1a1a1a;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        
+        .poster {
+            width: 420mm;
+            height: 297mm;
+            padding: 5mm;
+            background: white;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Header */
+        .poster-header {
+            background: linear-gradient(135deg, #8B0000 0%, #CC0000 100%);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4px;
+            flex-shrink: 0;
+        }
+        
+        .poster-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .poster-title h1 {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+        
+        .alert-icon {
+            background: rgba(255,255,255,0.2);
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 18px;
+        }
+        
+        .poster-subtitle {
+            font-size: 11px;
+            opacity: 0.95;
+            text-align: right;
+        }
+        
+        .poster-subtitle strong {
+            display: block;
+            font-size: 13px;
+        }
+        
+        /* Species Grid */
+        .species-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 4px;
+            flex: 1;
+            min-height: 0;
+        }
+        
+        .species-item {
+            background: #fff;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            min-height: 0;
+            cursor: pointer;
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+        
+        .species-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .species-item.noxious {
+            border-color: #CC0000;
+            border-width: 2.5px;
+        }
+        
+        .species-image {
+            flex: 1;
+            min-height: 0;
+            background: #f0f0f0;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 0.8rem;
+        }
+        
+        .species-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .priority-badge {
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 7px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+        
+        .priority-badge.noxious {
+            background: #CC0000;
+            color: white;
+        }
+        
+        .species-content {
+            padding: 3px 5px 4px;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+        }
+        
+        .species-name {
+            font-size: 8.5px;
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.1;
+        }
+        
+        .species-scientific {
+            font-size: 6.5px;
+            font-style: italic;
+            color: #666;
+            margin-bottom: 1px;
+        }
+        
+        .species-group {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 1px 4px;
+            border-radius: 2px;
+            font-size: 5.5px;
+            color: #666;
+            margin-bottom: 2px;
+            align-self: flex-start;
+        }
+        
+        .species-features ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .species-features li {
+            font-size: 6px;
+            color: #444;
+            padding-left: 7px;
+            position: relative;
+            line-height: 1.25;
+        }
+        
+        .species-features li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #8B0000;
+            font-weight: bold;
+        }
+        
+        /* Footer */
+        .poster-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 4px;
+            padding: 5px 10px;
+            background: #003366;
+            color: white;
+            border-radius: 5px;
+            font-size: 9px;
+            flex-shrink: 0;
+        }
+        
+        .footer-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .footer-action {
+            background: #CC0000;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        
+        .footer-right {
+            text-align: right;
+            font-size: 8px;
+            opacity: 0.9;
+        }
+        
+        .legend {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 8px;
+        }
+        
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+        }
+        
+        .legend-dot.noxious {
+            background: #CC0000;
+        }
+        
+        /* Print Styles */
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .poster {
+                margin: 0;
+                padding: 6mm;
+            }
+            .species-item {
+                break-inside: avoid;
+            }
+        }
+        
+        /* Screen preview styles */
+        @media screen {
+            body {
+                background: #888;
+                padding: 20px;
+                display: flex;
+                justify-content: center;
+            }
+            .poster {
+                box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            }
+        }
+
+        /* Gallery Modal */
+        .gallery-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.25s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .gallery-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .gallery-container {
+            width: 100%;
+            max-width: 700px;
+            max-height: calc(100vh - 40px);
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: transform 0.25s ease, opacity 0.25s ease;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+        }
+        
+        .gallery-overlay.active .gallery-container {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .gallery-header {
+            padding: 16px 20px;
+            background: #CC0000;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .gallery-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .gallery-scientific {
+            font-style: italic;
+            opacity: 0.8;
+            font-size: 0.9rem;
+            margin-top: 2px;
+        }
+        
+        .gallery-close {
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.15);
+            border: none;
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.15s;
+        }
+        
+        .gallery-close:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+        
+        .gallery-body {
+            padding: 20px;
+            overflow-y: auto;
+            flex: 1;
+        }
+        
+        .gallery-image-container {
+            position: relative;
+            background: #f0f0f0;
+            border-radius: 8px;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .gallery-info {
+            margin-top: 16px;
+        }
+        
+        .gallery-info h4 {
+            color: #003366;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        
+        .gallery-features ul {
+            padding-left: 18px;
+            color: #444;
+            font-size: 0.9rem;
+        }
+        
+        @media print {
+            .gallery-overlay { display: none !important; }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <h1>Biofouling ID Guide: Portugal</h1>
-            <p>Guia de identificação de espécies marinhas invasoras e transportadas por águas de lastro.</p>
+    <div class="poster">
+        <!-- Header -->
+        <div class="poster-header">
+            <div class="poster-title">
+                <span class="alert-icon">⚠️</span>
+                <h1>BIOINCRUSTAÇÃO — Espécies Invasoras (PT)</h1>
+            </div>
+            <div class="poster-subtitle">
+                <strong>Encontrou alguma? PARE E REPORTE ÀS AUTORIDADES</strong>
+                Fotografe • Registe a localização no prazo de 24h
+            </div>
         </div>
-    </header>
-
-    <main class="container">
-        <aside class="sidebar">
-            <h2>Filtros</h2>
-            <div class="filter-group">
-                <button class="filter-btn active" data-filter="all">Todas as Espécies</button>
-                <button class="filter-btn" data-filter="algas">Algas</button>
-                <button class="filter-btn" data-filter="moluscos">Moluscos</button>
-                <button class="filter-btn" data-filter="crustaceos">Crustáceos</button>
-                <button class="filter-btn" data-filter="outros">Outros Invertebrados</button>
+        
+        <!-- Species Grid - 6 columns x 3 rows = 18 items -->
+        <div class="species-grid">
+            
+            <!-- 1. Alga Vermelha -->
+            <div class="species-item noxious">
+                <div class="species-image">
+                    [Imagem]
+                    <span class="priority-badge noxious">INVASORA</span>
+                </div>
+                <div class="species-content">
+                    <div class="species-name">Alga Vermelha</div>
+                    <div class="species-scientific">Asparagopsis armata[cite: 1]</div>
+                    <span class="species-group">Algas • Portugal</span>
+                    <div class="species-features">
+                        <ul>
+                            <li>Alga marinha listada[cite: 1]</li>
+                            <li>Atenção à fixação em cascos</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </aside>
 
-        <section class="content">
-            <div id="species-grid" class="grid">
-                <!-- Os cartões (cards) serão gerados dinamicamente pelo JavaScript aqui -->
+            <!-- 2. Alga Castanha -->
+            <div class="species-item noxious">
+                <div class="species-image">
+                    [Imagem]
+                    <span class="priority-badge noxious">INVASORA</span>
+                </div>
+                <div class="species-content">
+                    <div class="species-name">Alga Castanha-Balão</div>
+                    <div class="species-scientific">Colpomenia peregrina[cite: 1]</div>
+                    <span class="species-group">Algas • Portugal</span>
+                    <div class="species-features">
+                        <ul>
+                            <li>Alga marinha listada[cite: 1]</li>
+                            <li>Transporte via lastro marítimo</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </section>
-    </main>
 
-    <script src="script.js"></script>
+            <!-- 3. Gracilaria -->
+            <div class="species-item noxious">
+                <div class="species-image">
+                    [Imagem]
+                    <span class="priority-badge noxious">INVASORA</span>
+                </div>
+                <div class="species-content">
+                    <div class="species-name">Cabelo-de-Velha</div>
+                    <div class="species-scientific">Gracilaria vermiculophylla[cite: 1]</div>
+                    <span class="species-group">Algas • Portugal</span>
+                    <div class="species-features">
+                        <ul>
+                            <li>Alga marinha listada[cite: 1]</li>
+                            <li>Comum em estuários</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Grateloupia -->
+            <div class="species-item noxious">
+                <div class="species-image">
+                    [Imagem]
+                    <span class="priority-badge noxious">INVASORA</span>
+                </div>
+                <div class="species-content">
+                    <div class="species-name">Alga Vermelha-Foliácea</div>
+                    <div class="species-scientific">Grateloupia turuturu[cite: 1]</div>
+                    <span class="species-group">Algas • Portugal</span>
+                    <div class="species-features">
+                        <ul>
+                            <li>Alga marinha listada[cite: 1]</li>
+                            <li>Adere a superfícies duras</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Sargassum -->
+            <div class="species-item noxious">
+                <div class="species-image">
+                    [Imagem]
+                    <span class="priority-badge noxious">INVASORA</span>
+                </div>
+                <div class="species-content">
+                    <div class="species-name">Sargaço Japonês</div>
+                    <div class="species-scientific">Sargassum muticum[cite: 1]</div>
+                    <span class="species-group">Algas • Portugal</span>
+                    <div class="species-features">
+                        <ul>
+                            <li>Alga marinha listada[cite: 1]</li>
+                            <li>Cria densos tapetes flutuantes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Undaria -->
+            <div class="species-item noxious">
+                <div class="species-image">
+                    [Imagem]
+                    <span class="priority-badge noxious">INVASORA</span>
+                </div>
+                <div class="species-content">
+                    <div class="species-name">Alga Wakame</div>
+                    <div class="species-scientific">Undaria pinnatifida[cite: 1]</div>
+                    <span class="species-group">Algas • Portugal</span>
+                    <div class="species-features">
+                        <ul>
+                            <li>Alga marinha listada[cite: 1]</li>
+                            <li>Ameaça de bioincrustação</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Mya arenaria -->
+            <div class="species-item noxious">
+                <div class="species-image">
+                    [Imagem]
+                    <span class="priority-badge noxious">INVASORA</span>
+                </div>
+                <div class="species-content">
+                    <div class="species-name">Amêijoa-Mija-Mija</div>
+                    <div class="species-scientific">Mya arenaria[cite: 1]</div>
+                    <span class="species-group">Moluscos • Portugal</span>
+                    <div class="species-features">
+                        <ul>
+                            <li>Molusco estuarino[cite: 1]</li>
+                            <li>Oculta-se no sedimento</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Pteropurpura -->
+            <div class="species-item noxious">
+                <div class="species-image">
+                    [Imagem]
+                    <span class="priority-badge noxious">INVASORA</span>
+                </div>
+                <div class="species-content">
+                    <div class="species-name">Búzio Asiático</div>
+                    <div class="species-scientific">Pteropurpura inornata[cite: 1]</div>
+                    <span class="species-group">Moluscos • Portugal</span>
+                    <div class="species-features">
+                        <ul>
+                            <li>Molusco invasor[cite: 1]</li>
+                            <li>Transportado em água de lastro</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. Ameijoa-japonesa -->
+            <div class="species-item noxious">
+                <div class="species-image">
+                    [Imagem]
+                    <span class="priority-badge noxious">INVASORA</span>
+                </div>
+                <div class="species-content">
+                    <div class="species-name">Amêijoa-Japonesa</div>
+                    <div class="species-scientific">Ruditapes philippinarum[cite: 1]</div>
+                    <span class="species-group">Moluscos • Portugal</span>
+                    <div class="species-features">
+                        <ul>
+                            <li>Molusco de águas salobras[cite: 1]</li>
+                            <li>Ameaça espécies nativas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10. Craca -->
+            <div class="species-item noxious">
+                <div class="species-image">
+                    [Imagem]
+                    <span class="priority-badge noxious">INVASORA</span>
+                </div>
+                <div class="species-content">
+                    <div class="species-name">Craca Estriada</div>
+                    <div class="species-scientific">Amphibalanus amphitrite[cite: 1]</div>
+                    <span class="species-group">Crustáceos • Portugal</span>
+                    <div class="species-features">
+                        <ul>
+                            <li>Crustáceo listado[cite: 1]</li>
+                            <li>Fixação pesada em cascos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 11. Craca -->
+            <div class="species-item noxious">
+                <div class="species-image">
+                    [Imagem]
+                    <span class="priority-badge noxious">INVASORA</span>
+                </div>
+                <div class="species-content">
+                    <div class="species-name">Craca Australiana</div>
+                    <div class="species-scientific">Austrominius modestus[cite: 1]</div>
+                    <span class="species-group">Crustáceos • Portugal</span>
+                    <div class="species-features">
+                        <ul>
+                            <li>Crustáceo listado[cite: 1]</li>
+                            <li>Fixa-se a qualquer estrutura</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12. Caranguejo Chinês -->
+            <div class="species-item noxious">
+                <div class="species-image">
+                    [Imagem]
+                    <span class="priority-badge noxious">INVASORA</span>
+                </div>
+                <div class="species-content">
+                    <div class="species-name">Caranguejo-Peludo-Chinês</div>
+                    <div class="species-scientific">Eriocheir sinensis[cite: 1]</div>
+                    <span class="species-group">Crustáceos • Portugal</span>
+                    <div class="species-features">
+                        <ul>
+                            <li>Crustáceo listado[cite: 1]</li>
+                            <li>Migra entre estuário e mar</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 13. Blackfordia -->
+            <div class="species-item noxious">
+                <div class="species-image">
+                    [Imagem]
+                    <span class="priority-badge noxious">INVASORA</span>
+                </div>
+                <div class="species-content">
+                    <div class="species-name">Medusa Invasora</div>
+                    <div class="species-scientific">Blackfordia virginica[cite: 1]</div>
+                    <span class="species-group">Outros Inv. • Portugal</span>
+                    <div class="species-features">
+                        <ul>
+                            <li>Outro invertebrado listado[cite: 1]</li>
+                            <li>Transporte via águas residuais</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 14. Botryllus -->
+            <div class="species-item noxious">
+                <div class="species-image">
+                    [Imagem]
+                    <span class="priority-badge noxious">INVASORA</span>
+                </div>
+                <div class="species-content">
+                    <div class="species-name">Ascídia Estrela</div>
+                    <div class="species-scientific">Botryllus schlosseri[cite: 1]</div>
+                    <span class="species-group">Outros Inv. • Portugal</span>
+                    <div class="species-features">
+                        <ul>
+                            <li>Outro invertebrado listado[cite: 1]</li>
+                            <li>Forma colónias no casco</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 15. Tricellaria -->
+            <div class="species-item noxious">
+                <div class="species-image">
+                    [Imagem]
+                    <span class="priority-badge noxious">INVASORA</span>
+                </div>
+                <div class="species-content">
+                    <div class="species-name">Briozoário Invasor</div>
+                    <div class="species-scientific">Tricellaria inopinata[cite: 1]</div>
+                    <span class="species-group">Outros Inv. • Portugal</span>
+                    <div class="species-features">
+                        <ul>
+                            <li>Outro invertebrado listado[cite: 1]</li>
+                            <li>Espécie agregadora</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 16. Info Box: Onde procurar -->
+            <div class="species-item" style="border-color: #003366; border-width: 2px; background: #f0f5fa; cursor: default;">
+                <div class="species-content" style="flex: 1; justify-content: center; padding: 8px;">
+                    <div class="species-name" style="font-size: 9px; color: #003366; margin-bottom: 4px;">🔍 ZONAS A VERIFICAR</div>
+                    <div class="species-features">
+                        <ul style="font-size: 6.5px; color: #003366;">
+                            <li>Caixas de mar (Sea chests)</li>
+                            <li>Proteção de cabos e hélices</li>
+                            <li>Grelhas de sucção</li>
+                            <li>Espaços mortos do leme</li>
+                            <li>Interior do poço da âncora</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 17. Info Box: Reportar -->
+            <div class="species-item" style="border-color: #CC0000; border-width: 2px; background: #fef5f5; cursor: default;">
+                <div class="species-content" style="flex: 1; justify-content: center; padding: 8px;">
+                    <div class="species-name" style="font-size: 9px; color: #CC0000; margin-bottom: 4px;">📞 COMO REPORTAR</div>
+                    <div class="species-features">
+                        <ul style="font-size: 6.5px;">
+                            <li><strong>Instituto da Conservação da Natureza e das Florestas (ICNF)</strong></li>
+                            <li>Tire fotografias nítidas</li>
+                            <li>Anote a localização/data</li>
+                            <li style="margin-top: 3px; color: #CC0000;"><strong>Não devolva as espécies ao mar</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 18. Info Box: NotasLegais -->
+            <div class="species-item" style="border-color: #f0c040; border-width: 2px; background: #fffbf0; cursor: default;">
+                <div class="species-content" style="flex: 1; justify-content: center; padding: 8px;">
+                    <div class="species-name" style="font-size: 9px; color: #a06000; margin-bottom: 4px;">⚠️ NOTA LEGAL</div>
+                    <div class="species-features">
+                        <ul style="font-size: 6.5px; color: #7a5a00;">
+                            <li>A lista completa encontra-se na:</li>
+                            <li><strong>Lista Nacional de Espécies Invasoras[cite: 1]</strong></li>
+                            <li>Artigo 17.º (Anexo II)[cite: 1]</li>
+                            <li>Decreto-Lei n.º 92/2019, de 10 de julho[cite: 1]</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <!-- Footer -->
+        <div class="poster-footer">
+            <div class="footer-left">
+                <div style="font-weight: bold; letter-spacing: 1px;">GUIA ID MARÍTIMO</div>
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="legend-dot noxious"></div>
+                        <span>INVASORA NACIONAL (DL 92/2019)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-action">
+                📞 CONTACTO EMERGÊNCIA AMBIENTAL (SEPNA): 808 200 520
+            </div>
+            <div class="footer-right">
+                Cartaz Bioincrustação v1.0 • Portugal<br>
+                © 2026 • Adaptado de modelo aberto
+            </div>
+        </div>
+    </div>
+    
+    <!-- Gallery Modal -->
+    <div class="gallery-overlay" id="gallery-overlay">
+        <div class="gallery-container">
+            <div class="gallery-header" id="gallery-header">
+                <div class="gallery-header-text">
+                    <h2 class="gallery-title" id="gallery-title"></h2>
+                    <div class="gallery-scientific" id="gallery-scientific"></div>
+                </div>
+                <button class="gallery-close" id="gallery-close" aria-label="Close">&times;</button>
+            </div>
+            <div class="gallery-body">
+                <div class="gallery-image-container">
+                    <div style="padding: 40px; color: #666;">(Substitua as tags [Imagem] no HTML pelo URL de fotos reais em 'assets/')</div>
+                </div>
+                <div class="gallery-info">
+                    <div class="gallery-features" id="gallery-features"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Gallery Modal functionality
+        const galleryOverlay = document.getElementById('gallery-overlay');
+        const galleryTitle = document.getElementById('gallery-title');
+        const galleryScientific = document.getElementById('gallery-scientific');
+        const galleryFeatures = document.getElementById('gallery-features');
+        const galleryClose = document.getElementById('gallery-close');
+        
+        document.querySelectorAll('.species-item.noxious').forEach(item => {
+            item.addEventListener('click', function() {
+                const name = this.querySelector('.species-name').textContent;
+                const scientific = this.querySelector('.species-scientific').textContent;
+                const featuresList = this.querySelector('.species-features ul');
+                const featuresHTML = featuresList ? '<h4>Detalhes da Espécie</h4>' + featuresList.outerHTML : '';
+                
+                galleryTitle.textContent = name;
+                galleryScientific.textContent = scientific;
+                galleryFeatures.innerHTML = featuresHTML;
+                
+                galleryOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        function closeGallery() {
+            galleryOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        galleryClose.addEventListener('click', closeGallery);
+        
+        galleryOverlay.addEventListener('click', function(e) {
+            if (e.target === galleryOverlay) {
+                closeGallery();
+            }
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && galleryOverlay.classList.contains('active')) {
+                closeGallery();
+            }
+        });
+    </script>
 </body>
 </html>
