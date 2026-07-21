@@ -1,17 +1,24 @@
-# Biofouling ID Guide - Portugal
+Biofouling ID Guide - Europe
 
-This repository contains a quick-reference web application designed for commercial divers, hull cleaners, marine inspectors, and citizen scientists in Portugal. 
+This repository contains a quick-reference web application designed for commercial divers, hull cleaners, marine inspectors, and citizen scientists in Europe.
+Its primary purpose is to help users easily identify and report marine invasive species (biofouling) found on ship hulls and niche areas (like sea chests and grates) before they are scraped off or spread into European waters.
 
-Its primary purpose is to help users easily identify and report marine invasive species (biofouling) found on ship hulls and niche areas (like sea chests and grates) before they are scraped off or spread into national waters. 
+Features
 
-### Features
-* **Quick Identification:** Simple visual cards detailing key identification features.
-* **Risk Categorization:** Species are categorized into Primary Invasive (Hull), Niche Area Hitchhikers, and Native Species (for baseline comparison).
-* **Interactive Gallery:** Clickable cards open a modal with detailed descriptions, multiple images, and "lookalike" warnings.
-* **Reporting Guidelines:** Built-in instructions and contacts for Portuguese environmental authorities (ICNF and SEPNA) to ensure rapid reporting.
+Quick Identification: Simple visual cards detailing key identification features.
 
-### Data Source
-The species listed and categorized in this guide are based on the **Portuguese National List of Invasive Species** (Annex II of Decree-Law no. 92/2019 of July 10).
+Risk Categorization: Species are categorized into Primary Invasive (Hull) and Niche Area Hitchhikers.
 
-### Acknowledgments & Credits
-This project was heavily inspired by and directly adapted from the excellent open-source project **[BiofoulingIdGuide](https://github.com/Mathew-Harvey/BiofoulingIdGuide/tree/main)** created by Mathew Harvey (MarineStream). The original layout, UI/UX design, and underlying structure were modified and translated to serve the Portuguese marine biosecurity context.
+Geographic Filtering: Dynamic buttons to filter invasive species based on specific European marine regions (Mediterranean, North Sea, Baltic Sea, etc.).
+
+Interactive Gallery: Clickable cards open a modal with detailed descriptions, multiple images, and "lookalike" warnings.
+
+Reporting Guidelines: Built-in instructions and contacts for National Competent Authorities and European platforms (EASIN and JRC IAS Europe App) to ensure rapid reporting.
+
+Data Source
+
+The species listed and categorized in this guide are based on the European Alien Species Information Network (EASIN) and EU Regulation 1143/2014 on invasive alien species.
+
+Acknowledgments & Credits
+
+This project was inspired by and directly adapted from the excellent open-source project BiofoulingIdGuide created by Mathew Harvey (MarineStream). The original layout, UI/UX design, and underlying structure were modified and translated to serve the European marine biosecurity context.
