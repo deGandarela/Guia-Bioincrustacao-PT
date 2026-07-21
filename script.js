@@ -211,3 +211,32 @@ document.addEventListener('keydown', function(e) {
         closeGallery();
     }
 });
+
+// --- Lógica dos Filtros Geográficos ---
+document.addEventListener('DOMContentLoaded', () => {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const speciesCards = document.querySelectorAll('.species-card');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            // 1. Remover a classe 'active' de todos os botões
+            filterBtns.forEach(b => b.classList.remove('active'));
+            // 2. Adicionar 'active' ao botão clicado
+            e.target.classList.add('active');
+
+            const filterValue = e.target.getAttribute('data-filter');
+
+            // 3. Filtrar os cartões com base na tag 'data-region'
+            speciesCards.forEach(card => {
+                const regions = card.getAttribute('data-region') || "";
+                
+                if (filterValue === 'all' || regions.includes(filterValue)) {
+                    // Repõe o display original do CSS (geralmente flex ou block)
+                    card.style.display = ''; 
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+});
