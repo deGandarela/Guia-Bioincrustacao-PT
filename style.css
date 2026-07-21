@@ -1,8 +1,8 @@
 /* Biofouling Identification Guide - Styles */
 
 :root {
-    --primary: #4CAF50; /* Vibrant Light Green */
-    --primary-light: #81C784; /* Paler Light Green */
+    --primary: #166534; /* Verde escuro (Novo) */
+    --primary-light: #14532d; /* Verde ligeiramente mais escuro (Novo) */
     --danger: #8B0000;
     --danger-light: #CC0000;
     --success: #2E8B57; /* Differentiated Native Green */
@@ -11,7 +11,9 @@
     --gray-100: #f8f9fa;
     --gray-200: #e9ecef;
     --gray-300: #dee2e6;
+    --gray-50: #f9fafb; /* Adicionado para a secção de filtros */
     --gray-600: #6c757d;
+    --gray-700: #495057; /* Adicionado para a secção de filtros */
     --gray-800: #343a40;
 }
 
@@ -54,7 +56,7 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(135deg, #388E3C 0%, var(--primary) 100%);
+    background: var(--primary);
     color: white;
     padding: 20px 0;
     position: sticky;
@@ -82,7 +84,7 @@ nav a:hover { opacity: 0.8; }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(145deg, #388E3C 0%, #2E7D32 50%, #1B5E20 100%);
+    background: linear-gradient(145deg, var(--primary) 0%, var(--primary-light) 100%);
     color: white;
     padding: 80px 0 90px;
     text-align: center;
@@ -414,7 +416,7 @@ table {
 }
 
 th {
-    background: #388E3C;
+    background: var(--primary);
     color: white;
     padding: 16px 20px;
     text-align: left;
@@ -434,7 +436,7 @@ td {
 }
 
 tbody tr { transition: background 0.15s ease; }
-tbody tr:hover { background: linear-gradient(90deg, rgba(76, 175, 80, 0.05), transparent); }
+tbody tr:hover { background: linear-gradient(90deg, rgba(22, 101, 52, 0.05), transparent); }
 tbody tr:last-child td { border-bottom: none; }
 
 /* Contact Section */
@@ -515,7 +517,7 @@ footer p { opacity: 0.8; font-size: 0.9rem; }
 .search-box:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+    box-shadow: 0 0 0 3px rgba(22, 101, 52, 0.2);
 }
 
 .search-box::placeholder { color: var(--gray-600); }
@@ -701,7 +703,7 @@ footer p { opacity: 0.8; font-size: 0.9rem; }
 .gallery-thumb.active {
     border-color: var(--primary);
     opacity: 1;
-    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+    box-shadow: 0 2px 8px rgba(22, 101, 52, 0.3);
 }
 
 .gallery-info {
@@ -793,8 +795,8 @@ footer p { opacity: 0.8; font-size: 0.9rem; }
 }
 
 .filter-btn.active {
-    background-color: #1d4ed8; /* Cor azul forte */
+    background-color: var(--primary);
     color: white;
-    border-color: #1d4ed8;
-    box-shadow: 0 2px 4px rgba(29, 78, 216, 0.3);
+    border-color: var(--primary);
+    box-shadow: 0 2px 4px rgba(22, 101, 52, 0.3);
 }
