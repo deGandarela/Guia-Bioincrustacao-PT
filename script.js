@@ -248,15 +248,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.error('Error loading species data:', error);
     }
 
-    // 2. Setup Geographic Filter Dropdowns (Multiple)
+    // 2. Setup Geographic Filter Dropdowns & Global Button
     const regionMenus = document.querySelectorAll('.region-filter');
+    const globalBtn = document.getElementById('global-btn');
     
+    // Ação dos menus dropdown
     if (regionMenus.length > 0) {
         regionMenus.forEach(menu => {
             menu.addEventListener('change', (e) => {
                 const filterValue = e.target.value;
                 
-                // Reset todos os outros menus para não haver conflitos na interface
+                // Faz reset aos outros menus para não confundir o utilizador
                 regionMenus.forEach(otherMenu => {
                     if (otherMenu !== e.target) {
                         otherMenu.selectedIndex = 0; 
@@ -264,20 +266,38 @@ document.addEventListener('DOMContentLoaded', async () => {
                 });
 
                 const speciesCards = document.querySelectorAll('.species-card');
-
+                
+                // Faz reset à barra de pesquisa ao mudar de região
+                document.querySelectorAll('.search-box').forEach(box => box.value = '');
+                
                 speciesCards.forEach(card => {
                     const regions = card.getAttribute('data-region') || "";
-                    
-                    // Fazer reset à barra de pesquisa ao mudar de região
-                    document.querySelectorAll('.search-box').forEach(box => box.value = '');
-                    
-                    // 'global' mostra todos, caso contrário verifica a tag da região
-                    if (filterValue === 'global' || regions.includes(filterValue)) {
+                    if (regions.includes(filterValue)) {
                         card.style.display = 'flex'; 
                     } else {
                         card.style.display = 'none';
                     }
                 });
+            });
+        });
+    }
+
+    // Ação do botão "Global (All Waters)"
+    if (globalBtn) {
+        globalBtn.addEventListener('click', (e) => {
+            e.preventDefault(); // Evita que a página salte para o topo
+            
+            // Repõe todos os menus no seu estado inicial "Desativado"
+            regionMenus.forEach(menu => {
+                menu.selectedIndex = 0;
+            });
+
+            // Limpa as caixas de pesquisa
+            document.querySelectorAll('.search-box').forEach(box => box.value = '');
+
+            // Mostra todas as espécies
+            document.querySelectorAll('.species-card').forEach(card => {
+                card.style.display = 'flex';
             });
         });
     }
