@@ -15,45 +15,67 @@
             <a href="#" class="logo"><div style="font-weight: bold; color: white; font-size: 1.2rem;">BioID Global</div></a>
             <nav>
                 <ul>
+                    <!-- Menu Global Default -->
                     <li>
-                        <select id="nav-region-filter" class="nav-select">
-                            <option value="all">🌍 Global (All Waters)</option>
-                            <optgroup label="Europe Seas">
-                                <option value="europe">🌍 All Europe</option>
-                                <option value="mediterranean">🌊 Mediterranean Sea</option>
-                                <option value="atlantic">🌊 Atlantic Coast</option>
-                                <option value="north-sea">🌊 North Sea</option>
-                                <option value="baltic">🌊 Baltic Sea</option>
-                                <option value="black-sea">🌊 Black Sea</option>
-                            </optgroup>
-                           <optgroup label="Americas & Caribbean">
-                                <option value="americas">🌎 Americas (All)</option>
-                                <option value="na-atlantic">🌊 North Atlantic Coast</option>
-                                <option value="gulf-mexico">🌊 Gulf of Mexico</option>
-                                <option value="caribbean">🌊 Wider Caribbean</option>
-                                <option value="sa-atlantic">🌊 South Atlantic Coast</option>
-                                <option value="na-pacific">🌊 North Pacific Coast</option>
-                                <option value="sa-pacific">🌊 South Pacific Coast</option>
-                                <option value="great-lakes">🌊 Great Lakes & Inland</option>
-                            </optgroup>
-                            <optgroup label="Asia & Indo-Pacific">
-                                <option value="indo-pacific">🌏 Indo-Pacific (All)</option>
-                                <option value="east-asia">🌊 East Asian Seas (China, Japan, Korea)</option>
-                                <option value="southeast-asia">🌊 Southeast Asian Seas (ASEAN)</option>
-                                <option value="south-asia">🌊 South Asian Seas (India, Sri Lanka)</option>
-                                <option value="indian-ocean">🌊 Indian Ocean</option>
-                                <option value="oceania">🌊 Australasia & Oceania</option>
-                            </optgroup>
-                            <optgroup label="Africa & Middle East">
-                                <option value="africa-me">🌍 Africa & Middle East (All)</option>
-                                <option value="west-africa">🌊 West Africa (Atlantic Coast)</option>
-                                <option value="south-africa">🌊 South Africa (The Cape)</option>
-                                <option value="east-africa">🌊 East Africa (Indian Ocean)</option>
-                                <option value="red-sea">🌊 Red Sea & Gulf of Aden</option>
-                                <option value="arabian-gulf">🌊 Arabian / Persian Gulf</option>
-                            </optgroup>
+                        <select class="region-filter nav-select">
+                            <option value="global">🌍 Global (All Waters)</option>
                         </select>
                     </li>
+
+                    <!-- Menu Europa -->
+                    <li>
+                        <select class="region-filter nav-select">
+                            <option value="none" selected disabled>🇪🇺 Europe Seas</option>
+                            <option value="europe">🌎 Europe</option>
+                            <option value="mediterranean">Mediterranean Sea</option>
+                            <option value="atlantic">Atlantic Coast</option>
+                            <option value="north-sea">North Sea</option>
+                            <option value="baltic">Baltic Sea</option>
+                            <option value="black-sea">Black Sea</option>
+                        </select>
+                    </li>
+
+                    <!-- Menu Américas -->
+                    <li>
+                        <select class="region-filter nav-select">
+                            <option value="none" selected disabled>🌎 Americas & Caribbean</option>
+                            <option value="americas">Americas (All)</option>
+                            <option value="na-atlantic">North Atlantic Coast</option>
+                            <option value="gulf-mexico">Gulf of Mexico</option>
+                            <option value="caribbean">Wider Caribbean</option>
+                            <option value="sa-atlantic">South Atlantic Coast</option>
+                            <option value="na-pacific">North Pacific Coast</option>
+                            <option value="sa-pacific">South Pacific Coast</option>
+                            <option value="great-lakes">Great Lakes & Inland</option>
+                        </select>
+                    </li>
+
+                    <!-- Menu Ásia & Indo-Pacífico -->
+                    <li>
+                        <select class="region-filter nav-select">
+                            <option value="none" selected disabled>🌏 Asia & Indo-Pacific</option>
+                            <option value="indo-pacific">Indo-Pacific (All)</option>
+                            <option value="east-asia">East Asian Seas</option>
+                            <option value="southeast-asia">Southeast Asian Seas</option>
+                            <option value="south-asia">South Asian Seas</option>
+                            <option value="indian-ocean">Indian Ocean</option>
+                            <option value="oceania">Australasia & Oceania</option>
+                        </select>
+                    </li>
+
+                    <!-- Menu África & Médio Oriente -->
+                    <li>
+                        <select class="region-filter nav-select">
+                            <option value="none" selected disabled>🌍 Africa & Middle East</option>
+                            <option value="africa-me">Africa & Middle East (All)</option>
+                            <option value="west-africa">West Africa (Atlantic Coast)</option>
+                            <option value="south-africa">South Africa (The Cape)</option>
+                            <option value="east-africa">East Africa (Indian Ocean)</option>
+                            <option value="red-sea">Red Sea & Gulf of Aden</option>
+                            <option value="arabian-gulf">Arabian / Persian Gulf</option>
+                        </select>
+                    </li>
+
                     <li><a href="#invasive">Invasive (Hull)</a></li>
                     <li><a href="#niche">Invasive (Niche)</a></li>
                     <li><a href="#contact">Report It</a></li>
