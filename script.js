@@ -248,24 +248,36 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.error('Error loading species data:', error);
     }
 
-    // 2. Setup Geographic Filter Dropdown
-    const regionFilterDropdown = document.getElementById('nav-region-filter');
-    if (regionFilterDropdown) {
-        regionFilterDropdown.addEventListener('change', (e) => {
-            const filterValue = e.target.value;
-            const speciesCards = document.querySelectorAll('.species-card');
+    // 2. Setup Geographic Filter Dropdowns (Multiple)
+    const regionMenus = document.querySelectorAll('.region-filter');
+    
+    if (regionMenus.length > 0) {
+        regionMenus.forEach(menu => {
+            menu.addEventListener('change', (e) => {
+                const filterValue = e.target.value;
+                
+                // Reset todos os outros menus para não haver conflitos na interface
+                regionMenus.forEach(otherMenu => {
+                    if (otherMenu !== e.target) {
+                        otherMenu.selectedIndex = 0; 
+                    }
+                });
 
-            speciesCards.forEach(card => {
-                const regions = card.getAttribute('data-region') || "";
-                
-                // Reset search boxes when changing region
-                document.querySelectorAll('.search-box').forEach(box => box.value = '');
-                
-                if (filterValue === 'all' || regions.includes(filterValue)) {
-                    card.style.display = 'flex'; 
-                } else {
-                    card.style.display = 'none';
-                }
+                const speciesCards = document.querySelectorAll('.species-card');
+
+                speciesCards.forEach(card => {
+                    const regions = card.getAttribute('data-region') || "";
+                    
+                    // Fazer reset à barra de pesquisa ao mudar de região
+                    document.querySelectorAll('.search-box').forEach(box => box.value = '');
+                    
+                    // 'global' mostra todos, caso contrário verifica a tag da região
+                    if (filterValue === 'global' || regions.includes(filterValue)) {
+                        card.style.display = 'flex'; 
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
             });
         });
     }
