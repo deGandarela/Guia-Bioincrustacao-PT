@@ -590,7 +590,7 @@
     "category": "niche-species",
     "dataName": "mytilopsis leucophaeata dark false mussel",
     "region": "europe baltic north-sea black-sea",
-    "images": "assets/Dark_False_Mussel.jpg",
+    "images": "assets/Dark_False_Mussel.jpg, assets/Dark_False_Mussel1.jpg",
     "mainImage": "assets/Dark_False_Mussel.jpg",
     "name": "Dark False Mussel",
     "scientific": "Mytilopsis leucophaeata",
