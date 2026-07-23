@@ -20,7 +20,7 @@
   {
     "category": "invasive",
     "dataName": "undaria pinnatifida wakame algae",
-    "region": "europe atlantic mediterranean north-sea oceania americas na-pacific sa-atlantic",
+    "region": "europe atlantic mediterranean north-sea oceania americas na-pacific sa-atlantic south-africa",
     "images": "assets/Wakame1.jpg, assets/Wakame.jpg",
     "mainImage": "assets/Wakame1.jpg",
     "name": "Wakame",
@@ -72,9 +72,9 @@
     ]
   },
   {
-    "category": "invasive",
+   "category": "invasive",
     "dataName": "rugulopteryx okamurae asian brown weed algae",
-    "region": "europe mediterranean atlantic",
+    "region": "europe mediterranean atlantic west-africa",
     "images": "assets/Asian_Brown_Weed.jpg",
     "mainImage": "assets/Asian_Brown_Weed.jpg",
     "name": "Asian Brown Weed",
@@ -82,7 +82,7 @@
     "priority": "INVASIVE",
     "priorityClass": "high",
     "group": "Marine Algae",
-    "description": "A highly aggressive brown algae that covers massive areas of the rocky seabed. Transferred via anchors and fishing gear.",
+    "description": "Native to Asia, this highly aggressive brown algae covers massive areas of the rocky seabed in Southern Europe and North Africa. Transferred via anchors.",
     "features": [
       "Yellowish-brown, flat, ribbon-like branches",
       "Forms extremely dense mats",
@@ -213,9 +213,9 @@
     ]
   },
   {
-    "category": "niche-species",
+  "category": "niche-species",
     "dataName": "callinectes sapidus atlantic blue crab",
-    "region": "europe mediterranean black-sea atlantic",
+    "region": "europe mediterranean black-sea atlantic east-asia",
     "images": "assets/Atlantic_Blue_Crab.jpg",
     "mainImage": "assets/Atlantic_Blue_Crab.jpg",
     "name": "Atlantic Blue Crab",
@@ -223,7 +223,7 @@
     "priority": "INVASIVE",
     "priorityClass": "high",
     "group": "Crustaceans",
-    "description": "A voracious predator, originally from the Americas, now devastating bivalve populations in the Mediterranean.",
+    "description": "A voracious predator, originally from the Americas, now devastating bivalve populations in the Mediterranean, Black Sea, and East Asia.",
     "features": [
       "Bright blue claws",
       "Olive green carapace with sharp lateral spines"
@@ -285,7 +285,7 @@
   {
     "category": "niche-species",
     "dataName": "carcinus maenas european green crab",
-    "region": "americas na-atlantic na-pacific sa-atlantic oceania east-asia",
+    "region": "americas na-atlantic na-pacific sa-atlantic oceania east-asia south-africa",
     "images": "assets/European_Green_Crab.webp",
     "mainImage": "assets/European_Green_Crab.webp",
     "name": "European Green Crab",
@@ -323,7 +323,7 @@
   {
     "category": "invasive",
     "dataName": "tubastraea coccinea orange cup coral",
-    "region": "americas gulf-mexico caribbean sa-atlantic",
+    "region": "americas gulf-mexico caribbean sa-atlantic west-africa",
     "images": "assets/Orange_Cup_Coral.webp, assets/Orange_Cup_Coral.jpg",
     "mainImage": "assets/Orange_Cup_Coral.webp",
     "name": "Orange Cup Coral",
@@ -331,7 +331,7 @@
     "priority": "INVASIVE",
     "priorityClass": "high",
     "group": "Other Invertebrates",
-    "description": "An invasive stony coral that heavily fouls ship hulls and oil rigs in the Gulf of Mexico and Brazil, outcompeting native sponges and corals.",
+    "description": "An invasive stony coral that heavily fouls ship hulls and oil rigs, outcompeting native sponges and corals on artificial structures.",
     "features": [
       "Bright orange, red, or yellow polyps",
       "Forms cup-like skeletal structures",
@@ -342,7 +342,7 @@
   {
     "category": "invasive",
     "dataName": "ciona intestinalis vase tunicate sea squirt",
-    "region": "americas na-pacific sa-pacific oceania indo-pacific",
+    "region": "americas na-pacific sa-pacific oceania indo-pacific south-africa",
     "images": "assets/Vase_Tunicate.jpg",
     "mainImage": "assets/Vase_Tunicate.jpg",
     "name": "Vase Tunicate",
@@ -350,7 +350,7 @@
     "priority": "WATCH",
     "priorityClass": "medium",
     "group": "Other Invertebrates",
-    "description": "A solitary sea squirt that creates massive biofouling weight on vessel hulls and aquaculture gear across the Pacific and Oceania.",
+    "description": "A solitary sea squirt that creates massive biofouling weight on vessel hulls and aquaculture gear across multiple oceans.",
     "features": [
       "Tubular, translucent, jelly-like body",
       "Yellow or green tint at the tips of its siphons",
@@ -437,7 +437,7 @@
   {
     "category": "invasive",
     "dataName": "ficopomatus enigmaticus australian tubeworm",
-    "region": "americas na-atlantic sa-atlantic na-pacific europe atlantic north-sea mediterranean",
+    "region": "americas na-atlantic sa-atlantic na-pacific europe atlantic north-sea mediterranean south-africa",
     "images": "assets/Australian_Tubeworm.jpeg, assets/Australian_Tubeworm.png",
     "mainImage": "assets/Australian_Tubeworm.jpeg",
     "name": "Australian Tubeworm",
@@ -549,9 +549,9 @@
     ]
   },
   {
-    "category": "niche-species",
+   "category": "niche-species",
     "dataName": "crepidula fornicata common slipper limpet",
-    "region": "europe atlantic north-sea",
+    "region": "europe atlantic north-sea americas na-pacific sa-atlantic sa-pacific east-asia",
     "images": "assets/Slipper_Limpet.jpg",
     "mainImage": "assets/Slipper_Limpet.jpg",
     "name": "Common Slipper Limpet",
@@ -559,7 +559,7 @@
     "priority": "INVASIVE",
     "priorityClass": "high",
     "group": "Molluscs",
-    "description": "Introduced from North America, this sea snail is a major pest in Europe. It heavily fouls hulls, sea chests, and completely smothers native oyster beds.",
+    "description": "Introduced from the North American Atlantic coast, this sea snail is a major pest globally. It heavily fouls hulls and completely smothers native oyster beds.",
     "features": [
       "Oval, arched shell resembling a slipper or boat",
       "Has a distinctive internal white 'shelf' or deck",
@@ -587,9 +587,9 @@
     ]
   },
   {
-    "category": "niche-species",
+   "category": "niche-species",
     "dataName": "mytilopsis leucophaeata dark false mussel",
-    "region": "europe baltic north-sea black-sea",
+    "region": "europe baltic north-sea black-sea americas sa-atlantic",
     "images": "assets/Dark_False_Mussel.jpg, assets/Dark_False_Mussel1.jpg",
     "mainImage": "assets/Dark_False_Mussel.jpg",
     "name": "Dark False Mussel",
@@ -597,7 +597,7 @@
     "priority": "INVASIVE",
     "priorityClass": "high",
     "group": "Molluscs",
-    "description": "A severe biofouling pest in European brackish waters (especially the Baltic Sea). It completely clogs internal cooling pipes of ships and industrial power plants.",
+    "description": "Native to the Gulf of Mexico and US East Coast. A severe biofouling pest in European and South American brackish waters. It clogs internal cooling pipes.",
     "features": [
       "Small, thumbnail-sized shell (usually under 2 cm)",
       "Dark brown or yellowish-brown, without the zigzag stripes of a Zebra mussel",
@@ -606,9 +606,9 @@
     ]
   },
   {
-    "category": "invasive",
+  "category": "invasive",
     "dataName": "magallana gigas pacific oyster crassostrea",
-    "region": "europe atlantic north-sea mediterranean americas na-pacific oceania",
+    "region": "europe atlantic north-sea mediterranean americas na-pacific na-atlantic sa-pacific sa-atlantic oceania south-africa",
     "images": "assets/Pacific_Oyster.jpg",
     "mainImage": "assets/Pacific_Oyster.jpg",
     "name": "Pacific Oyster",
@@ -616,7 +616,7 @@
     "priority": "WATCH",
     "priorityClass": "medium",
     "group": "Molluscs",
-    "description": "Originally introduced for aquaculture, it has escaped and now forms massive, razor-sharp reefs on port infrastructure, ship hulls, and natural shorelines.",
+    "description": "Native to Japan. Originally introduced globally for aquaculture, it has escaped and now forms massive, razor-sharp reefs on port infrastructure across all continents.",
     "features": [
       "Large, highly irregular and deeply fluted (wavy) shell",
       "Can grow very large (up to 30 cm / 12 inches)",
@@ -625,9 +625,9 @@
     ]
   },
   {
-    "category": "invasive",
+   "category": "invasive",
     "dataName": "caulerpa cylindracea grape caulerpa algae",
-    "region": "europe mediterranean",
+    "region": "europe mediterranean west-africa",
     "images": "assets/Grape_Caulerpa.jpg, assets/Grape_Caulerpa.webp",
     "mainImage": "assets/Grape_Caulerpa.jpg",
     "name": "Grape Caulerpa",
@@ -635,7 +635,7 @@
     "priority": "INVASIVE",
     "priorityClass": "high",
     "group": "Marine Algae",
-    "description": "One of the most invasive seaweeds in the Mediterranean. It forms dense, continuous carpets over the seabed and spreads easily via anchors and hull appendages.",
+    "description": "Native to Australia. One of the most invasive seaweeds in the Mediterranean and Canary Islands. It forms dense carpets and spreads easily via anchors.",
     "features": [
       "Bright green color",
       "Distinctive small, bulbous or grape-like structures along the stems",
@@ -779,7 +779,7 @@
   {
     "category": "invasive",
     "dataName": "codium fragile dead mans fingers green sea fleece algae",
-    "region": "oceania europe americas",
+    "region": "oceania europe americas south-africa",
     "images": "assets/Dead_Mans_Fingers.jpg",
     "mainImage": "assets/Dead_Mans_Fingers.jpg",
     "name": "Dead Man's Fingers",
@@ -787,7 +787,7 @@
     "priority": "WATCH",
     "priorityClass": "medium",
     "group": "Marine Algae",
-    "description": "Native to the Northwest Pacific, this heavy green algae easily fragments. Tiny pieces get caught in hull imperfections and anchors, allowing it to spread to Oceania and the rest of the world.",
+    "description": "Native to the Northwest Pacific, this heavy green algae easily fragments. Tiny pieces get caught in hull imperfections and anchors, allowing it to spread across the globe.",
     "features": [
       "Dark green color with a sponge-like, velvety texture",
       "Thick, branching, cylindrical fronds that look like thick fingers",
@@ -798,7 +798,7 @@
   {
     "category": "invasive",
     "dataName": "mytilus galloprovincialis mediterranean mussel",
-    "region": "east-asia oceania americas na-pacific sa-pacific sa-atlantic",
+    "region": "east-asia oceania americas na-pacific sa-pacific sa-atlantic south-africa",
     "images": "assets/Mediterranean_Mussel.jpg",
     "mainImage": "assets/Mediterranean_Mussel.jpg",
     "name": "Mediterranean Mussel",
@@ -806,7 +806,7 @@
     "priority": "INVASIVE",
     "priorityClass": "high",
     "group": "Molluscs",
-    "description": "Native to Europe, this is a massive biofouling pest in Asia, the Americas, and Oceania. It forms incredibly dense beds that sink buoys and completely cover ship hulls.",
+    "description": "Native to Europe, this is a massive biofouling pest in Asia, the Americas, and Africa. It forms incredibly dense beds that sink buoys and completely cover ship hulls.",
     "features": [
       "Smooth, dark blue to black shell, sometimes with brown edges",
       "Pointed, beak-like tip (umbo) that turns slightly downwards",
@@ -835,7 +835,7 @@
   {
     "category": "invasive",
     "dataName": "amphibalanus eburneus ivory barnacle",
-    "region": "east-asia south-asia southeast-asia indian-ocean europe atlantic mediterranean black-sea",
+    "region": "east-asia south-asia southeast-asia indian-ocean europe atlantic mediterranean black-sea west-africa",
     "images": "assets/Ivory_Barnacle.jpg",
     "mainImage": "assets/Ivory_Barnacle.jpg",
     "name": "Ivory Barnacle",
@@ -843,7 +843,7 @@
     "priority": "INVASIVE",
     "priorityClass": "high",
     "group": "Crustaceans",
-    "description": "Native to the Americas, this white barnacle is now a primary fouler in European, Indian, and Asian ports. It rapidly degrades anti-fouling coatings.",
+    "description": "Native to the Americas, this white barnacle is now a primary fouler in European, Indian, Asian, and African ports. It rapidly degrades anti-fouling coatings.",
     "features": [
       "Pure white, smooth cone-shaped shell",
       "Relatively low and flat compared to other large barnacles",
@@ -891,7 +891,7 @@
   {
     "category": "invasive",
     "dataName": "ascidiella aspersa european sea squirt",
-    "region": "east-asia south-asia americas na-atlantic sa-atlantic oceania",
+    "region": "east-asia south-asia americas na-atlantic sa-atlantic oceania south-africa",
     "images": "assets/European_Sea_Squirt.jpg",
     "mainImage": "assets/European_Sea_Squirt.jpg",
     "name": "European Sea Squirt",
@@ -905,6 +905,60 @@
       "Translucent or dirty grey/brown, rough and cartilaginous skin",
       "Two siphons located close to each other at the top",
       "Often covered in mud or small algae"
+    ]
+  },
+  {
+    "category": "invasive",
+    "dataName": "arcuatula senhousia asian date mussel",
+    "region": "arabian-gulf red-sea europe mediterranean atlantic north-sea americas na-pacific oceania west-africa",
+    "images": "assets/Asian_Date_Mussel.jpg",
+    "mainImage": "assets/Asian_Date_Mussel.jpg",
+    "name": "Asian Date Mussel",
+    "scientific": "Arcuatula senhousia",
+    "priority": "INVASIVE",
+    "priorityClass": "high",
+    "group": "Molluscs",
+    "description": "Native to East Asia, this small mussel forms dense, cocoon-like mats in soft sediments and on artificial structures, severely impacting invaded regions.",
+    "features": [
+      "Olive green to brown shell with radiating purple/brown zig-zag lines",
+      "Small (usually up to 3 cm)",
+      "Encloses itself in a 'cocoon' of byssal threads"
+    ]
+  },
+  {
+    "category": "invasive",
+    "dataName": "schizoporella errata branching bryozoan",
+    "region": "arabian-gulf red-sea west-africa south-africa americas na-atlantic sa-atlantic na-pacific sa-pacific oceania east-asia south-asia southeast-asia indian-ocean europe atlantic",
+    "images": "assets/Branching_Bryozoan.jpg",
+    "mainImage": "assets/Branching_Bryozoan.jpg",
+    "name": "Branching Bryozoan",
+    "scientific": "Schizoporella errata",
+    "priority": "INVASIVE",
+    "priorityClass": "high",
+    "group": "Other Invertebrates",
+    "description": "Native to the Mediterranean, it is a prominent fouling organism across the globe. It heavily encrusts ship hulls and port structures.",
+    "features": [
+      "Hard, brittle, and typically dark red, orange, or purple",
+      "Forms branching, coral-like structures or flat encrustations",
+      "Creates heavy secondary fouling"
+    ]
+  },
+  {
+    "category": "invasive",
+    "dataName": "hydroides dianthus encrusting tubeworm",
+    "region": "arabian-gulf red-sea west-africa south-africa europe mediterranean atlantic black-sea east-asia americas sa-atlantic",
+    "images": "assets/Encrusting_Tubeworm.jpg",
+    "mainImage": "assets/Encrusting_Tubeworm.jpg",
+    "name": "Encrusting Tubeworm",
+    "scientific": "Hydroides dianthus",
+    "priority": "WATCH",
+    "priorityClass": "medium",
+    "group": "Other Invertebrates",
+    "description": "Native to the Western Atlantic, this tubeworm rapidly colonizes ship hulls and piping in invaded regions across Europe, Asia, and Africa, increasing drag and fuel costs.",
+    "features": [
+      "Builds white, twisting, solitary or clustered calcareous tubes",
+      "Extends a small feathery crown to feed",
+      "Tubes are circular in cross-section (unlike the keeled tubes of H. elegans)"
     ]
   }
 ]
