@@ -827,8 +827,15 @@ footer p { opacity: 0.8; font-size: 0.9rem; }
     border-color: white;
 }
 
-/* Estilo para as opções quando a lista abre */
+/* Estilo para o fundo de toda a lista suspensa (categorias e opções) */
+.nav-select optgroup, 
 .nav-select option {
-    background-color: var(--primary); /* Mantém a tua cor verde escura */
+    background-color: var(--primary); /* Mantém o fundo verde escuro em tudo */
     color: white;
+}
+
+/* Estilo específico para os títulos das categorias (ex: "Europe Seas") */
+.nav-select optgroup {
+    font-weight: 700;
+    color: var(--primary-light); /* Dá um tom verde mais claro aos títulos para se distinguirem das opções clicáveis */
 }
