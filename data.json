@@ -342,7 +342,7 @@
   {
     "category": "invasive",
     "dataName": "ciona intestinalis vase tunicate sea squirt",
-    "region": "americas na-atlantic na-pacific sa-atlantic sa-pacific",
+    "region": "americas na-atlantic na-pacific sa-atlantic sa-pacific europe atlantic north-sea baltic mediterranean",
     "images": "assets/Vase_Tunicate.jpg",
     "mainImage": "assets/Vase_Tunicate.jpg",
     "name": "Vase Tunicate",
@@ -437,7 +437,7 @@
   {
     "category": "invasive",
     "dataName": "ficopomatus enigmaticus australian tubeworm",
-    "region": "americas na-atlantic sa-atlantic na-pacific",
+    "region": "americas na-atlantic sa-atlantic na-pacific europe atlantic north-sea mediterranean",
     "images": "assets/Australian_Tubeworm.jpg",
     "mainImage": "assets/Australian_Tubeworm.jpg",
     "name": "Australian Tubeworm",
@@ -494,7 +494,7 @@
   {
     "category": "invasive",
     "dataName": "bugula neritina brown bryozoan",
-    "region": "americas na-atlantic sa-atlantic na-pacific gulf-mexico",
+    "region": "americas na-atlantic sa-atlantic na-pacific gulf-mexico europe atlantic mediterranean",
     "images": "assets/Brown_Bryozoan.jpg",
     "mainImage": "assets/Brown_Bryozoan.jpg",
     "name": "Brown Bryozoan",
@@ -546,6 +546,120 @@
       "Olive green column usually marked with vertical orange or yellow stripes",
       "Up to 100 thin, translucent tentacles",
       "Often found growing among mussels and barnacles on hulls"
+    ]
+  },
+  {
+    "category": "niche-species",
+    "dataName": "crepidula fornicata common slipper limpet",
+    "region": "europe atlantic north-sea",
+    "images": "assets/Slipper_Limpet.jpg",
+    "mainImage": "assets/Slipper_Limpet.jpg",
+    "name": "Common Slipper Limpet",
+    "scientific": "Crepidula fornicata",
+    "priority": "INVASIVE",
+    "priorityClass": "high",
+    "group": "Molluscs",
+    "description": "Introduced from North America, this sea snail is a major pest in Europe. It heavily fouls hulls, sea chests, and completely smothers native oyster beds by competing for food and space.",
+    "features": [
+      "Oval, arched shell resembling a slipper or boat",
+      "Has a distinctive internal white 'shelf' or deck",
+      "Grows in curved, stacked chains (one on top of another)",
+      "Color is typically cream or pale brown with reddish streaks"
+    ]
+  },
+  {
+    "category": "invasive",
+    "dataName": "austrominius modestus new zealand barnacle",
+    "region": "europe atlantic north-sea",
+    "images": "assets/New_Zealand_Barnacle.jpg",
+    "mainImage": "assets/New_Zealand_Barnacle.jpg",
+    "name": "New Zealand Barnacle",
+    "scientific": "Austrominius modestus",
+    "priority": "WATCH",
+    "priorityClass": "medium",
+    "group": "Crustaceans",
+    "description": "Brought to Europe on ship hulls during WWII, it outcompetes native barnacles. It is a highly aggressive primary fouler on vessels, tolerating brackish water and high pollution.",
+    "features": [
+      "Has exactly 4 calcareous shell plates (unlike native European barnacles which have 6)",
+      "Smooth, grayish-white or brownish cone",
+      "Diamond-shaped or cross-shaped opening",
+      "Grows very rapidly, creating severe hydrodynamic drag"
+    ]
+  },
+  {
+    "category": "niche-species",
+    "dataName": "mytilopsis leucophaeata dark false mussel",
+    "region": "europe baltic north-sea black-sea",
+    "images": "assets/Dark_False_Mussel.jpg",
+    "mainImage": "assets/Dark_False_Mussel.jpg",
+    "name": "Dark False Mussel",
+    "scientific": "Mytilopsis leucophaeata",
+    "priority": "INVASIVE",
+    "priorityClass": "high",
+    "group": "Molluscs",
+    "description": "A severe biofouling pest in European brackish waters (especially the Baltic Sea). It completely clogs internal cooling pipes of ships and industrial power plants.",
+    "features": [
+      "Small, thumbnail-sized shell (usually under 2 cm)",
+      "Dark brown or yellowish-brown, without the zigzag stripes of a Zebra mussel",
+      "Has a small 'tooth' (apophysis) inside the hinge of the shell",
+      "Forms exceptionally dense, mat-like clusters in pipes"
+    ]
+  },
+  {
+    "category": "invasive",
+    "dataName": "magallana gigas pacific oyster crassostrea",
+    "region": "europe atlantic north-sea mediterranean",
+    "images": "assets/Pacific_Oyster.jpg",
+    "mainImage": "assets/Pacific_Oyster.jpg",
+    "name": "Pacific Oyster",
+    "scientific": "Magallana gigas",
+    "priority": "WATCH",
+    "priorityClass": "medium",
+    "group": "Molluscs",
+    "description": "Originally introduced for aquaculture, it has escaped and now forms massive, razor-sharp reefs on port infrastructure, ship hulls, and natural shorelines across Europe.",
+    "features": [
+      "Large, highly irregular and deeply fluted (wavy) shell",
+      "Can grow very large (up to 30 cm / 12 inches)",
+      "Edges of the shell are extremely sharp",
+      "Purple, brown, or green streaks on a whitish background"
+    ]
+  },
+  {
+    "category": "invasive",
+    "dataName": "caulerpa cylindracea grape caulerpa algae",
+    "region": "europe mediterranean",
+    "images": "assets/Grape_Caulerpa.jpg",
+    "mainImage": "assets/Grape_Caulerpa.jpg",
+    "name": "Grape Caulerpa",
+    "scientific": "Caulerpa cylindracea",
+    "priority": "INVASIVE",
+    "priorityClass": "high",
+    "group": "Marine Algae",
+    "description": "One of the most invasive seaweeds in the Mediterranean. It forms dense, continuous carpets over the seabed and spreads easily via anchors and hull appendages.",
+    "features": [
+      "Bright green color",
+      "Distinctive small, bulbous or grape-like structures along the stems",
+      "Grows from a creeping horizontal runner",
+      "Releases a toxic chemical that deters native fish from eating it"
+    ]
+  },
+  {
+    "category": "niche-species",
+    "dataName": "lagocephalus sceleratus silver cheeked toadfish pufferfish",
+    "region": "europe mediterranean",
+    "images": "assets/Silver_Cheeked_Toadfish.jpg",
+    "mainImage": "assets/Silver_Cheeked_Toadfish.jpg",
+    "name": "Silver-cheeked Toadfish",
+    "scientific": "Lagocephalus sceleratus",
+    "priority": "INVASIVE",
+    "priorityClass": "high",
+    "group": "Fish",
+    "description": "Entered the Mediterranean via the Suez Canal (Lessepsian migrant). A major threat for divers inspecting hulls or port infrastructure, as it is highly aggressive and extremely toxic.",
+    "features": [
+      "Elongated pufferfish body with a silvery band along the sides",
+      "Dark greenish back covered in symmetrical black spots",
+      "Contains deadly tetrodotoxin (paralyzing poison)",
+      "Has powerful, beak-like teeth capable of biting through dive gear"
     ]
   }
 
