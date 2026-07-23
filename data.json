@@ -287,7 +287,7 @@
     "dataName": "carcinus maenas european green crab",
     "region": "americas na-atlantic na-pacific sa-atlantic",
     "images": "assets/European_Green_Crab.jpg",
-    "mainImage": "assets/European_Green_Crab.jpg",
+    "mainImage": "assets/European_Green_Crab.webp",
     "name": "European Green Crab",
     "scientific": "Carcinus maenas",
     "priority": "INVASIVE",
